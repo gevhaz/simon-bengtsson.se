@@ -1,0 +1,10 @@
+Header add "Cache-Control" "no-cache"
+
+#Rewrite everything to https
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#Error pages
+ErrorDocument 403 https://simon-bengtsson.se/forbidden.html
+ErrorDocument 404 https://simon-bengtsson.se/notfound.html

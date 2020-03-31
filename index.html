@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simon Bengtsson's Personal Webpage</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="author" content="Simon Bengtsson">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="https://www.simon-bengtsson.se/" target="_blank">
+    </head>
+
+    <body>
+        <div id="page-container">
+            <div id="content">
+                <div class="header">
+                    <!-- Name in large letters -->
+                    <div class="myname"> 
+                        <h2><a href=".">Simon Bengtsson</a></h2> 
+                    </div>
+
+                    <!-- Links to the tabs -->
+                    <div class="tab">
+                        <button class="tablinks" 
+                                onclick="openTab(event, 'home')" 
+                                id="defaultOpen">Home</button>
+                        <button class="tablinks" 
+                                onclick="openTab(event,
+                                'resume')">Resume</button>
+                        <button class="tablinks"
+                                onclick="openTab(event, 'gallery')">
+                            Gallery</button>
+                    </div>
+                </div>
+
+                <div id="home" class="tabcontent">
+                    <div>
+                        <p>
+                        <img src="/images/picture-of-me.jpg" 
+                             alt="A picture of me" 
+                             id="profile-picture">
+                            Hello! I'm Simon Bengtsson and this is my personal
+                            page. Here you can find out a little bit about me,
+                            and have a look at my resume.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="resume" class="tabcontent">
+                    <div id="resume-content">
+                        <div class="category-title">
+                            <h4>About Me</h4>
+                        </div>
+                        <div class="category-content">
+                            <div class="resume-entry">
+                                <p id="aboutme"> I recently completed my studies
+                                in the Faculty of Law at Lund University. My
+                                unique strengths, setting me apart from most
+                                jurists, are comprehensive knowledge of
+                                programming and computers in general. I also
+                                find it easy to acquire knowledge in new areas,
+                                as exemplified by my having spent two year in
+                                the Bachelor's Program of Theoretical Physics
+                                where I received good grades (transcript
+                                provided upon request) and took a significant
+                                number of advanced courses in mathematics,
+                                physics, and programming. I also learned to
+                                program in R by myself in order to do a
+                                statistical analysis for my master's thesis. My
+                                ability in language combined with my
+                                understanding for both society, technology and
+                                nature makes me especially qualified for work
+                                where these fields intersect. One example is
+                                work dealing with digital rights – something
+                                that requires understanding for both law and
+                                technology. </p>
+                            </div>
+                        </div>
+                        <div class="category-title">
+                            <h4>Education</h4>
+                        </div>
+                        <div class="category-content">
+                            <div class="resume-entry">
+                                <p class="resume-object">Master's Program of Law </p>
+                                <p class="study-location">Lund University</p>
+                                <p class="study-year">2014</p>
+                                <ul class="resume-list">
+                                    <li> Master's thesis: 
+                                        <span>
+                                            <a
+                                                href="https://lup.lub.lu.se/student-papers/record/9006623">The
+                                                effect of regime change on human
+                                                rights treaty effectiveness</a></span>
+                                    </li>
+                                    <li> Bachelor's thesis: 
+                                        <span>
+                                            <a
+                                                href="https://lup.lub.lu.se/student-papers/record/8965816">Why
+                                                do states comply? - A game
+                                                theoretic approach to international
+                                                law</a></span> </li>
+                                </ul>
+                            </div>
+
+                            <div class="resume-entry">
+                                <p class="resume-object">Bachelor's Program of Natural Science,
+                                Theoretical Physics</p>
+                                <p class="study-location">Lund University</p>
+                                <p class="study-year">2014</p>
+                            </div>
+                        </div>
+
+                        <div class="category-title">
+                            <h4>Programming</h4>
+                        </div>
+                        <div class="category-content">
+                            <div class="resume-entry">
+                                <p class="resume-object">Programming and
+                                Simulations (FYTB01, 15 credits)</p>
+                                <p class="study-location">Lund University</p>
+                                <p class="study-year">2014</p>
+                            </div>
+
+                            <div class="resume-entry">
+                                <p class="resume-object">Computational Physics
+                                (FYTN03, 7.5 credits)</p>
+                                <p class="study-location">Lund University</p>
+                                <p class="study-year">2014</p>
+                            </div>
+
+                            <div class="resume-entry">
+                                <p class="resume-object">Programming, First Course
+                                (EDA016, 7.5 credits)</p>
+                                <p class="study-location">Lund University</p>
+                                <p class="study-year">2012</p>
+                            </div>
+                        </div>
+
+                        <div class="category-title">
+                            <h4>Languages</h4>
+                        </div>
+                        <div class="category-content">
+                            <div class="resume-subcategory">
+                                <p>English</p>
+                            </div>
+
+                            <div class="resume-entry">
+                                <p class="resume-object">Certificate of
+                                Proficiency in English</p>
+                                <p class="study-location">Cambridge
+                                English Language Assessment</p>
+                                <p class="study-year">2016</p>
+                            </div>
+
+                            <div class="resume-entry">
+                                <p class="resume-object">Certificate in
+                                Advanced English</p>
+                                <p class="study-location">Cambridge
+                                English Language Assessment</p>
+                                <p class="study-year">2013</p>
+                            </div>
+
+                            <div class="resume-subcategory">
+                                <p>Japanese</p>
+                            </div>
+                            <div class="resume-entry">
+                                <p class="resume-object">Japanese II:
+                                Language Proficiency 2 (JP1048, 15
+                                credits)</p>
+                                <p class="study-location">Dalarna
+                                University</p>
+                                <p class="study-year">2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gallery" class="tabcontent">
+                    <h3>Lund</h3>
+                    <p>These are some photographs taken in my hometown of
+                    Lund, Sweden</p>
+                    <div id="lund-photos" class="gallery-category">
+                        <div class="gallery-photo">
+                            <img src="/images/lund01.jpg" 
+                                 alt="The Lund Cathedral">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/lund02.jpg"
+                                 alt="The Lund University Main Library">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/lund03.jpg"
+                                 alt="The University Building in Lund">
+                        </div>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>I am hugely into coffee. The photos include a Japanse
+                    specialty beans shop and a Japanese made one-use pre-packed
+                    coffee filter, excellently filling the market need for those
+                    who can't stand instant coffee.</p>
+                    <div id="coffee-photos" class="gallery-category">
+                        <div class="gallery-photo">
+                            <img src="/images/coffee01.jpg" 
+                                 alt="Me, at Blue Bottle Coffee">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/coffee02.jpg"
+                                 alt="Specialty beans shop">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/coffee03.jpg"
+                                 alt="Next level instant coffee">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/coffee04.jpg"
+                                 alt="Coffee living">
+                        </div>
+                    </div>
+                    <h3>Småland</h3>
+                    <p>
+                    I am originally from Småland in southern Sweden. Here are
+                    some photos taken on various locations in proximity of where
+                    I grew up.
+                    </p>
+                    <div id="smaland-photos" class="gallery-category">
+                        <div class="gallery-photo">
+                            <img src="/images/smaland01.jpg" 
+                                 alt="A horse and a sheep">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/smaland02.jpg"
+                                 alt="Bales on a meadow">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/smaland03.jpg"
+                                 alt="Vänne river in the forest">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/smaland04.jpg"
+                                 alt="Frozen pond with cabin">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/smaland05.jpg"
+                                 alt="Snow on a twig">
+                        </div>
+                    </div>
+                    <h3>Animals</h3>
+                    <p>
+                    Some photos of zoo animals
+                    </p>
+                    <div id="animals-photos" class="gallery-category">
+                        <div class="gallery-photo">
+                            <img src="/images/animals01.jpg" 
+                                 alt="Butterfly">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/animals02.jpg"
+                                 alt="Giraffes">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/animals03.jpg"
+                                 alt="Monkeys">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/animals04.jpg"
+                                 alt="Penguins">
+                        </div>
+                        <div class="gallery-photo">
+                            <img src="/images/animals05.jpg"
+                                 alt="Flamingos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+
+        <footer id="footer">
+            <p> Contact me:
+            <a
+                href="https://www.linkedin.com/in/simon-bengtsson-864a8b186/">LINKEDIN</a></p>
+        </footer>
+        </div>
+
+    </body>
+</html>
