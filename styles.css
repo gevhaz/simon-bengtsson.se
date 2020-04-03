@@ -422,5 +422,12 @@ p {
 
 #contactlinks a {
     font-family: FreeSansBold;
+    font-size: 1em;
     color: #666;
+}
+
+#contactlinks img {
+    height:.7em;
+    padding-right: .5em;
+    filter: opacity(80%);
 }
