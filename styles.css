@@ -247,28 +247,6 @@ p {
   text-align: justify;
 }
 
-#footer, #page-container {
-    flex-shrink: 0;
-}
-
-#footer {
-    height: 40px;
-    width: 100%;
-    background-color: #ddd;
-    color: #444;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#footer a, #footer p {
-    font-family: FreeSans;
-    font-size: 0.8em;
-    color: #777;
-    margin: 0;
-}
-
 #gallery h3 {
     font-size: 1.7em;
     display: block;
