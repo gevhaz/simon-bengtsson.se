@@ -64,16 +64,10 @@ window.onclick = function(event) {
   }
 }
 
-// Pressing escape closes modal
-document.onkeydown = function(event) {
+changeModalImage = direction => {
   const index = currentImage ? parseInt(currentImage.dataset.index) : 0;
-
-  switch (event.key) {
-    case 'Escape':
-      modal.style.display = "none";
-      modalImg.src = "";
-      break;
-    case 'ArrowRight': // Go to next image
+  switch (direction) {
+    case 'ArrowRight':
       let nextIndex = (index + 1) % imgs.length;
       openModal(imgs[nextIndex]);
       break;
@@ -81,5 +75,18 @@ document.onkeydown = function(event) {
       let prevIndex = index != 0 ? (index - 1) % imgs.length : imgs.length - 1;
       openModal(imgs[prevIndex]);
       break;
+  }
+}
+
+// Pressing escape closes modal
+document.onkeydown = function(event) {
+
+  switch (event.key) {
+    case 'Escape':
+      modal.style.display = "none";
+      modalImg.src = "";
+      break;
+    case 'ArrowRight': changeModalImage(event.key); break;
+    case 'ArrowLeft':  changeModalImage(event.key); break;
   }
 };
