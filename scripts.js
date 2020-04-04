@@ -29,11 +29,24 @@ var captionText = document.getElementById("caption");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+// Array of all images in gallery
+const imgs = [...document.querySelectorAll('.gallery-photo > img')];
+
+// Add index and event listener to all gallery images
+imgs.forEach((img, i) => {
+  img.dataset.index = i;
+  img.addEventListener('click', e => { openModal(e.target); });
+});
+
+// Image currently shown in modal
+let currentImage; 
+
 function openModal(img) {
   // Get the image and insert it inside the modal - use 
   // its "alt" text as a caption
   modal.style.display = "block";
-  modalImg.src = img.src.replace("thumbnails", "fullsize");
+  currentImage = img;
+  modalImg.src = currentImage.src.replace("thumbnails", "fullsize");
   captionText.innerHTML = img.alt;
 }
 
@@ -43,8 +56,7 @@ span.onclick = function() {
   modalImg.src = "";
 }
 
-// When the user clicks anywhere outside of the modal, 
-// close it
+// Clicking outside modal closes it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -52,7 +64,22 @@ window.onclick = function(event) {
   }
 }
 
-const imgs = document.querySelectorAll('.gallery-photo > img');
-[...imgs].forEach(img => {
-    img.addEventListener('click', e => { openModal(e.target); });
-});
+// Pressing escape closes modal
+document.onkeydown = function(event) {
+  const index = currentImage ? parseInt(currentImage.dataset.index) : 0;
+
+  switch (event.key) {
+    case 'Escape':
+      modal.style.display = "none";
+      modalImg.src = "";
+      break;
+    case 'ArrowRight': // Go to next image
+      let nextIndex = (index + 1) % imgs.length;
+      openModal(imgs[nextIndex]);
+      break;
+    case 'ArrowLeft': // Go to previous image
+      let prevIndex = index != 0 ? (index - 1) % imgs.length : imgs.length - 1;
+      openModal(imgs[prevIndex]);
+      break;
+  }
+};
