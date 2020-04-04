@@ -1,6 +1,6 @@
 // MAKE TABS CLICKABLE
 
-function openTab(evt, tabName) {
+openTab = (evt, tabName) => {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -14,7 +14,7 @@ function openTab(evt, tabName) {
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
-}
+};
 
 document.getElementById("defaultOpen").click();
 
@@ -41,7 +41,7 @@ imgs.forEach((img, i) => {
 // Image currently shown in modal
 let currentImage; 
 
-function openModal(img) {
+openModal = img => {
   // Get the image and insert it inside the modal - use 
   // its "alt" text as a caption
   modal.style.display = "block";
@@ -50,18 +50,14 @@ function openModal(img) {
   captionText.innerHTML = img.alt;
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+closeModal = () => {
   modal.style.display = "none";
   modalImg.src = "";
 }
 
-// Clicking outside modal closes it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    modalImg.src = "";
-  }
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  closeModal();
 }
 
 changeModalImage = direction => {
@@ -79,14 +75,37 @@ changeModalImage = direction => {
 }
 
 // Pressing escape closes modal
-document.onkeydown = function(event) {
-
+document.onkeydown = event => {
   switch (event.key) {
-    case 'Escape':
-      modal.style.display = "none";
-      modalImg.src = "";
-      break;
+    case 'Escape':     closeModal(); break;
     case 'ArrowRight': changeModalImage(event.key); break;
     case 'ArrowLeft':  changeModalImage(event.key); break;
   }
 };
+
+// Unify touch and click cases
+unify = e => { return e.changedTouches ? e.changedTouches[0] : e };
+
+let x0 = null;
+
+lock = event => { x0 = unify(event).clientX };
+
+move = event => {
+  if (x0 || x0 === 0) {
+    let dx = unify(event).clientX - x0;
+    sign = Math.sign(dx);
+
+    switch (sign) {
+      case  0: closeModal(); break;
+      case -1: changeModalImage('ArrowRight'); break;
+      case  1: changeModalImage('ArrowLeft'); break;
+    }
+  }
+}
+
+modal.addEventListener('mousedown', lock);
+modal.addEventListener('touchstart', lock);
+modal.addEventListener('mouseup', move);
+modal.addEventListener('touchend', move);
+modal.addEventListener('touchmove', e => {e.preventDefault()}, false)
+modal.addEventListener('mousemove', e => {e.preventDefault()}, false)

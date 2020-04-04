@@ -1,37 +1,37 @@
 @font-face {
-  font-family: FreeSerif;
-  src: url(fonts/FreeSerif.woff);
+    font-family: FreeSerif;
+    src: url(fonts/FreeSerif.woff);
 }
 
 @font-face {
-  font-family: FreeSans;
-  src: url(fonts/FreeSans.woff);
+    font-family: FreeSans;
+    src: url(fonts/FreeSans.woff);
 }
 
 @font-face {
-  font-family: FreeSansBoldOblique;
-  src: url(fonts/FreeSansBoldOblique.woff);
+    font-family: FreeSansBoldOblique;
+    src: url(fonts/FreeSansBoldOblique.woff);
 }
 
 @font-face {
-  font-family: FreeSerifItalic;
-  src: url(fonts/FreeSerifItalic.woff);
+    font-family: FreeSerifItalic;
+    src: url(fonts/FreeSerifItalic.woff);
 }
 
 @font-face {
-  font-family: FreeSerifBoldItalic;
-  src: url(fonts/FreeSerifBoldItalic.woff);
+    font-family: FreeSerifBoldItalic;
+    src: url(fonts/FreeSerifBoldItalic.woff);
 }
 
 @font-face {
-  font-family: FreeSansBold;
-  src: url(fonts/FreeSansBold.woff);
+    font-family: FreeSansBold;
+    src: url(fonts/FreeSansBold.woff);
 }
 
 body {
-  margin: 0px;
-  overflow-y: scroll;
-  font-size: 26px;
+    margin: 0px;
+    overflow-y: scroll;
+    font-size: 26px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -70,52 +70,52 @@ p {
 }
 
 .header {
-  border-bottom: 1px solid black;
-  text-align: center;
-  color: #222;
-  display: flex;
-  align-items: center;
-  flex-flow: row wrap;
-  margin: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: #222;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 20px;
 }
 
 .myname {
-  margin: 0 auto 0 0;
-  padding: 0px 0px 40px 10px;
-  font-size: 2em;
+    margin: 0 auto 0 0;
+    padding: 0px 0px 40px 10px;
+    font-size: 2em;
 }
 
 .myname a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 .myname h2 {
-  margin: 0px;
+    margin: 0px;
 }
 
 .myname a {
-  font-family: FreeSerifBoldItalic;
+    font-family: FreeSerifBoldItalic;
 }
 
 .tab {
-  overflow: hidden;
-  background-color: #fff;
-  margin: auto 2% .25em 2%;
+    overflow: hidden;
+    background-color: #fff;
+    margin: auto 2% .25em 2%;
 }
 
 .tab button {
-  background-color: inherit;
-  float: left;
-  cursor: pointer;
-  padding: 6px 16px;
-  font-family: FreeSans;
-  color: #444;
-  font-size: 1.2em;
-  border-width: 0 0 7px 0;
-  border-color: transparent;
-  border-style: solid;
-  display: inline-block;
+    background-color: inherit;
+    float: left;
+    cursor: pointer;
+    padding: 6px 16px;
+    font-family: FreeSans;
+    color: #444;
+    font-size: 1.2em;
+    border-width: 0 0 7px 0;
+    border-color: transparent;
+    border-style: solid;
+    display: inline-block;
 }
 
 /* Not best practice put necessary for style */
@@ -125,13 +125,13 @@ p {
 }
 
 .tab button:hover {
-  border-color: #ddd;
+    border-color: #ddd;
 }
 
 .tab button.active {
-  background-color: #474a4f;
-  color: white;
-  border-color: white;
+    background-color: #474a4f;
+    color: white;
+    border-color: white;
 }
 
 /*largest screens*/
@@ -157,7 +157,7 @@ p {
 }
 
 #home {
-  font-family: FreeSerif;
+    font-family: FreeSerif;
 }
 
 #home p {
@@ -165,39 +165,39 @@ p {
 }
 
 #resume-title {
-  text-align: left;
+    text-align: left;
 }
 
 #resume-content {
-  display: flex;
-  flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .category-content {
-  flex: 2 1 65%;
-  padding: .5em;
+    flex: 2 1 65%;
+    padding: .5em;
 }
 
 .category-title {
     width: 8em;
-  padding: .5em;
+    padding: .5em;
 }
 
 .category-title h4 {
     margin: 0 0.5em 0 0;
-  font-family: FreeSans;
-  font-size: 1.3em;
-  color: #333;
+    font-family: FreeSans;
+    font-size: 1.3em;
+    color: #333;
 }
 
 .category-content p {
-  margin: 0;
+    margin: 0;
 }
 
 .category-content ul {
-  list-style-type: "– ";
-  font-family: FreeSerif;
-  margin-top: 0px;
+    list-style-type: "– ";
+    font-family: FreeSerif;
+    margin-top: 0px;
 }
 
 #profile-picture {
@@ -209,42 +209,42 @@ p {
 }
 
 .resume-object {
-  font-family: FreeSerifItalic;
-  font-size: 1.0em;
-  color: #444;
+    font-family: FreeSerifItalic;
+    font-size: 1.0em;
+    color: #444;
 }
 
 .resume-list {
-  font-family: FreeSerif;
-  font-size: 1em;
-  color: #444;
+    font-family: FreeSerif;
+    font-size: 1em;
+    color: #444;
 }
 
 .study-location {
-  font-family: FreeSerif;
-  font-size: 0.9em;
+    font-family: FreeSerif;
+    font-size: 0.9em;
 }
 
 .study-year {
-  font-family: FreeSerif;
-  font-size: 0.9em;
+    font-family: FreeSerif;
+    font-size: 0.9em;
 }
 
 .resume-entry {
-  margin: 0 0 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .resume-subcategory {
-  font-family: FreeSerif;
-  font-size: 1.3em;
-  text-decoration: underline;
-  padding: 0 0 10px 0;
+    font-family: FreeSerif;
+    font-size: 1.3em;
+    text-decoration: underline;
+    padding: 0 0 10px 0;
 }
 
 #aboutme {
-  font-family: FreeSerif;
-  font-size: 0.9em;
-  text-align: justify;
+    font-family: FreeSerif;
+    font-size: 0.9em;
+    text-align: justify;
 }
 
 #gallery h3 {
@@ -299,77 +299,78 @@ p {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 5vh; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
 .modal-content {
-  margin: 4vh auto;
-  padding: 4vh;
-  display: block;
-  width: auto;
-  height: auto;
-  max-height: 69vh;
+    margin: 4vh auto;
+    padding: 4vh;
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 69vh;
+    pointer-events: none;
 }
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-  .modal-content {
-    max-width: 94%;
-    margin: 0 auto;
-    padding: 3%;
-  }
+    .modal-content {
+        max-width: 94%;
+        margin: 0 auto;
+        padding: 3%;
+    }
 }
 
 /* Caption of Modal Image */
 #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 650px;
-  text-align: center;
-  color: #ccc;
-  padding: 1vh 0;
-  height: 8vh;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 650px;
+    text-align: center;
+    color: #ccc;
+    padding: 1vh 0;
+    height: 8vh;
 }
 
 /* Add Animation */
 .modal-content , #caption {
-  animation-name: zoom;
-  animation-duration: 0.4s;
+    animation-name: zoom;
+    animation-duration: 0.4s;
 }
 
 @keyframes zoom {
-  from {transform: scale(0.4)}
-  to {transform: scale(1)}
+    from {transform: scale(0.4)}
+    to {transform: scale(1)}
 }
 
 /* The Close Button */
 .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #contactinformation {
