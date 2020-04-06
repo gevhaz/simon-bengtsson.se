@@ -415,7 +415,7 @@ p {
     height: 810px;
     border: none;
     display: block;
-    padding: auto;
+    padding: 0;
     margin: 0;
 }
 

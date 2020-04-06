@@ -26,7 +26,7 @@ function preload() {
 }
 
 function setup() {
-  canvasWidth = 650 < displayWidth ? 650 : displayWidth;
+  canvasWidth = 640 < displayWidth ? 640 : displayWidth;
   canvasHeight = 800;
   createCanvas(canvasWidth, canvasHeight);
   song.setVolume(0.5);

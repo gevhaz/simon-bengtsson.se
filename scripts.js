@@ -7,9 +7,21 @@ openTab = (evt, tabName) => {
     tabcontent[i].style.display = "none";
   }
 
+  p5jsIframe = document.querySelectorAll('.p5js');
+
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+    for (let i = 0; i < p5jsIframe.length; i++) {
+      p5jsIframe[i].src = "";
+    }
+  }
+
+  if (tabName == 'projects') {
+    for (let i = 0; i < p5jsIframe.length; i++) {
+      p5jsIframe[i].src = p5jsIframe[i].dataset.src;
+    }
   }
 
   document.getElementById(tabName).style.display = "block";
