@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Simon Bengtsson">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <base href="https://www.simon-bengtsson.se/">
+        <script async="true" defer="true" src="scripts.js"></script>
     </head>
 
     <body>
@@ -31,6 +31,9 @@
                 <button class="tablinks"
                         onclick="openTab(event, 'contact')">
                     Contact</button>
+                <button class="tablinks"
+                        onclick="openTab(event, 'projects')">
+                    Projects</button>
             </div>
         </div>
 
@@ -312,8 +315,34 @@
                 </div>
             </div>
         </div>
+        <div id="projects" class="tabcontent">
+          <div id=p5js-section>
+            <h2>p5.js</h2>
+            <p>One of my hobbies is to make visualizations for music. I mainly
+            use openFrameworks but I started out in Processing and p5.js, and
+            the latter is easy to host on a webpage so I include some of these
+            projects here as well. Currently, they are not working in Firefox,
+            but have a look further down on the page for my openFrameworks
+            projects.</p>
 
-        <script src="scripts.js"></script>
+            <iframe src="p5/p5js.html" class="p5js"></iframe>
+
+          </div>
+          <div id=of-section>
+            <h2>openFrameworks</h2>
+            <p>Here is a video of one of my openFrameworks projects. The code
+            can be found <a
+                           href=https://github.com/gevhaz/18.1_shader_u12>on
+                           Github</a>.
+            </p>
+
+            <video id=ofvideo controls>
+              <source src="/video/u12_final.mp4" type="video/mp4">
+              There should have been a video here but your browser does not seem
+              to support it.
+            </video>
+          </div>
+        </div>
 
     </body>
 </html>

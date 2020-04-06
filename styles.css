@@ -74,7 +74,6 @@ p {
     text-align: center;
     color: #222;
     display: flex;
-    align-items: center;
     flex-flow: row wrap;
     margin: 20px;
 }
@@ -88,20 +87,20 @@ p {
 .myname a {
     color: black;
     text-decoration: none;
+    font-family: FreeSerifBoldItalic;
 }
 
 .myname h2 {
     margin: 0px;
 }
 
-.myname a {
-    font-family: FreeSerifBoldItalic;
-}
-
 .tab {
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
     overflow: hidden;
     background-color: #fff;
-    margin: auto 2% .25em 2%;
+    margin: auto 2% .25em auto;
 }
 
 .tab button {
@@ -409,4 +408,19 @@ p {
     height:.7em;
     padding-right: .5em;
     filter: opacity(80%);
+}
+
+.p5js {
+    width: 100%;
+    height: 810px;
+    border: none;
+    display: block;
+    padding: auto;
+    margin: 0;
+}
+
+#ofvideo {
+  width: 100%;
+  height: auto;
+  padding: 1em 0;
 }
