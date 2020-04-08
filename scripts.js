@@ -65,6 +65,14 @@ openModal = img => {
 closeModal = () => {
   modal.style.display = "none";
   modalImg.src = "";
+
+  // Image get selected upon closing on mobile so deselect
+  if(window.getSelection) {
+    window.getSelection().removeAllRanges();
+  }
+  if (document.selection) {
+    document.selection.empty();
+  }
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -73,16 +81,18 @@ span.onclick = function() {
 }
 
 changeModalImage = direction => {
-  const index = currentImage ? parseInt(currentImage.dataset.index) : 0;
-  switch (direction) {
-    case 'ArrowRight':
-      let nextIndex = (index + 1) % imgs.length;
-      openModal(imgs[nextIndex]);
-      break;
-    case 'ArrowLeft': // Go to previous image
-      let prevIndex = index != 0 ? (index - 1) % imgs.length : imgs.length - 1;
-      openModal(imgs[prevIndex]);
-      break;
+  if (modal.style.display == "block") {
+    const index = currentImage ? parseInt(currentImage.dataset.index) : 0;
+    switch (direction) {
+      case 'ArrowRight':
+        let nextIndex = (index + 1) % imgs.length;
+        openModal(imgs[nextIndex]);
+        break;
+      case 'ArrowLeft': // Go to previous image
+        let prevIndex = index != 0 ? (index - 1) % imgs.length : imgs.length - 1;
+        openModal(imgs[prevIndex]);
+        break;
+    }
   }
 }
 
@@ -108,16 +118,16 @@ move = event => {
     sign = Math.sign(dx);
 
     switch (sign) {
-      case  0: closeModal(); break;
       case -1: changeModalImage('ArrowRight'); break;
       case  1: changeModalImage('ArrowLeft'); break;
     }
   }
 }
 
-modal.addEventListener('mousedown', lock);
-modal.addEventListener('touchstart', lock);
-modal.addEventListener('mouseup', move);
-modal.addEventListener('touchend', move);
+modal.addEventListener('click', closeModal, false);
+modal.addEventListener('mousedown', lock, false);
+modal.addEventListener('touchstart', lock, false);
+modal.addEventListener('mouseup', move, false);
+modal.addEventListener('touchend', move, false);
 modal.addEventListener('touchmove', e => {e.preventDefault()}, false)
 modal.addEventListener('mousemove', e => {e.preventDefault()}, false)

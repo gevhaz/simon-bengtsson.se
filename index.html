@@ -29,11 +29,11 @@
                         onclick="openTab(event, 'gallery')">
                     Gallery</button>
                 <button class="tablinks"
-                        onclick="openTab(event, 'contact')">
-                    Contact</button>
-                <button class="tablinks"
                         onclick="openTab(event, 'projects')">
                     Projects</button>
+                <button class="tablinks"
+                        onclick="openTab(event, 'contact')">
+                    Contact</button>
             </div>
         </div>
 
@@ -43,10 +43,22 @@
                 <img src="/images/picture-of-me.jpg" 
                      alt="A picture of me" 
                      id="profile-picture">
-                Hello! I'm Simon Bengtsson and this is my personal
-                page. Here you can find out a little bit about me,
-                and have a look at my resume. I have also included an
-                album of some of my favorite pictures.
+                Hello! I'm Simon Bengtsson and this is my personal page. Here
+                you can find out a little bit about me, and have a look at my
+                resume. I have also included an album of some of my favorite
+                pictures. 
+                </p>
+
+                <p>
+                If you are interested in learning more about my coding
+                experience, you can have a look at the Projects tab or my <a
+                    href="https://github.com/gevhaz">GitHub profile</a>. 
+                </p>
+
+                <p>
+                If you
+                want to get in touch and haven't received my email address, I
+                provide alternative ways to contact me in the Contacts tab.
                 </p>
             </div>
         </div>
@@ -185,22 +197,22 @@
             Lund, Sweden.</p>
             <ul id="lund-photos" class="gallery-category">
                 <li class="gallery-photo">
-                    <img src="/images/thumbnails/lund01.jpg" 
-                         alt="The Lund Cathedral">
-                </li>
-                <li class="gallery-photo">
                     <img src="/images/thumbnails/lund02.jpg"
                          alt="The Lund University Main Library">
                 </li>
                 <li class="gallery-photo">
-                    <img src="/images/thumbnails/lund03.jpg"
-                         alt="The University Building in Lund">
+                    <img src="/images/thumbnails/lund01.jpg" 
+                         alt="The Lund Cathedral">
                 </li>
                 <li class="gallery-photo">
                     <img src="/images/thumbnails/lund04.jpg"
                          alt="All Saints Church">
                 </li>
-                <li></li>
+                <li class="gallery-photo">
+                    <img src="/images/thumbnails/lund03.jpg"
+                         alt="The University Building in Lund">
+                </li>
+                <li class="gallery-photo"></li>
             </ul>
             <h3>Coffee</h3>
             <p>I am hugely into coffee. The photos include a Japanse
@@ -213,6 +225,10 @@
                          alt="Me, at Blue Bottle Coffee">
                 </li>
                 <li class="gallery-photo">
+                    <img src="/images/thumbnails/coffee04.jpg"
+                         alt="Coffee living">
+                </li>
+                <li class="gallery-photo">
                     <img src="/images/thumbnails/coffee02.jpg"
                          alt="Specialty beans shop">
                 </li>
@@ -220,11 +236,7 @@
                     <img src="/images/thumbnails/coffee03.jpg"
                          alt="Next level instant coffee">
                 </li>
-                <li class="gallery-photo">
-                    <img src="/images/thumbnails/coffee04.jpg"
-                         alt="Coffee living">
-                </li>
-                <li></li>
+                <li class="gallery-photo"></li>
             </ul>
             <h3>Småland</h3>
             <p>
@@ -242,10 +254,6 @@
                          alt="Bales on a meadow">
                 </li>
                 <li class="gallery-photo">
-                    <img src="/images/thumbnails/smaland03.jpg"
-                         alt="Vänne river in the forest">
-                </li>
-                <li class="gallery-photo">
                     <img src="/images/thumbnails/smaland04.jpg"
                          alt="Frozen pond with cabin">
                 </li>
@@ -253,7 +261,11 @@
                     <img src="/images/thumbnails/smaland05.jpg"
                          alt="Snow on a twig">
                 </li>
-                <li></li>
+                <li class="gallery-photo">
+                    <img src="/images/thumbnails/smaland03.jpg"
+                         alt="Vänne river in the forest">
+                </li>
+                <li class="gallery-photo"></li>
             </ul>
             <h3>Animals</h3>
             <p>
@@ -269,14 +281,6 @@
                          alt="Giraffes">
                 </li>
                 <li class="gallery-photo">
-                    <img src="/images/thumbnails/animals03.jpg"
-                         alt="Monkeys">
-                </li>
-                <li class="gallery-photo">
-                    <img src="/images/thumbnails/animals04.jpg"
-                         alt="Emperor Penguins">
-                </li>
-                <li class="gallery-photo">
                     <img src="/images/thumbnails/animals05.jpg"
                          alt="Scarlet Ibises">
                 </li>
@@ -284,7 +288,15 @@
                     <img src="/images/thumbnails/animals06.jpg"
                          alt="A small bunny">
                 </li>
-                <li></li>
+                <li class="gallery-photo">
+                    <img src="/images/thumbnails/animals04.jpg"
+                         alt="Emperor Penguins">
+                </li>
+                <li class="gallery-photo">
+                    <img src="/images/thumbnails/animals03.jpg"
+                         alt="Monkeys">
+                </li>
+                <li class="gallery-photo"></li>
             </ul>
             <h3>Flowers</h3>
             <p>
@@ -299,10 +311,10 @@
                 <li class="gallery-photo">
                     <img src="/images/thumbnails/flower02.jpg"
                          alt="Cherry blossoms">
-                <li></li>
+                <li class="gallery-photo"></li>
             </ul>
 
-            <!-- modals -->
+            <!-- Modal for gallery images -->
             <div id="myModal" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="modal-img">
@@ -319,7 +331,7 @@
                     you can find more detailed contact information
                     there. I also have a recently created public GitHub
                     account where you can see some of the code I've
-                    written – among other things the code for this
+                    written, among other things the code for this
                     website. 
                     </p>
                 </div>
@@ -344,9 +356,7 @@
             <p>One of my hobbies is to make visualizations for music. I mainly
             use openFrameworks but I started out in Processing and p5.js, and
             the latter is easy to host on a webpage so I include some of these
-            projects here as well. Currently, they are not working in Firefox,
-            but have a look further down on the page for my openFrameworks
-            projects.</p>
+            projects here as well.</p>
 
             <iframe src="" data-src="p5/springs/springs.html"
                            class="p5js"></iframe>
