@@ -31,12 +31,17 @@ openTab = (evt, tabName) => {
 document.getElementById("defaultOpen").click();
 
 
+///////////////////
+// PHOTO GALLERY //
+///////////////////
+
 // MODALS FOR PHOTO GALLERY
 
 // Get the modal
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("modal-img");
 var captionText = document.getElementById("caption");
+var loader = document.getElementById("loader");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -50,17 +55,48 @@ imgs.forEach((img, i) => {
   img.addEventListener('click', e => { openModal(e.target); });
 });
 
+preloadModalImage = index => {
+  let loadingImg = new Image();
+  loadingImg.src = imgs[index].src.replace("thumbnails", "fullsize");
+}
+
+// Returns indices of current and surrounding images
+getSurroundingIndices = img => {
+  let i = parseInt(img.dataset.index);
+  let prevIndex = i != 0 ? (i - 1) % imgs.length : imgs.length - 1;
+  let nextIndex = (i + 1) % imgs.length;
+  return {prev: prevIndex, current: i, next: nextIndex};
+};
+
 // Image currently shown in modal
 let currentImage; 
 
 openModal = img => {
   // Get the image and insert it inside the modal - use 
   // its "alt" text as a caption
-  modal.style.display = "block";
   currentImage = img;
   modalImg.src = currentImage.src.replace("thumbnails", "fullsize");
   captionText.innerHTML = img.alt;
-}
+
+  // While loading, show loader and hide image and text
+  modal.style.display = 'block';
+  loader.style.display = 'block';
+  modalImg.style.display = 'none';
+  captionText.style.display = 'none';
+
+  // After image is loaded, show image and text and hide loader
+  modalImg.addEventListener('load', () => {
+    console.log("loaded image");
+    captionText.style.display = 'block';
+    modalImg.style.display = 'block';
+    loader.style.display = 'none';
+  });
+
+  // Preload for faster display of images
+  const indices = getSurroundingIndices(currentImage);
+  preloadModalImage(indices.next);
+  preloadModalImage(indices.prev);
+};
 
 closeModal = () => {
   modal.style.display = "none";
@@ -73,28 +109,29 @@ closeModal = () => {
   if (document.selection) {
     document.selection.empty();
   }
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  closeModal();
-}
+};
 
 changeModalImage = direction => {
   if (modal.style.display == "block") {
-    const index = currentImage ? parseInt(currentImage.dataset.index) : 0;
+    const indices = getSurroundingIndices(currentImage);
     switch (direction) {
       case 'ArrowRight':
-        let nextIndex = (index + 1) % imgs.length;
-        openModal(imgs[nextIndex]);
+        openModal(imgs[indices.next]);
         break;
-      case 'ArrowLeft': // Go to previous image
-        let prevIndex = index != 0 ? (index - 1) % imgs.length : imgs.length - 1;
-        openModal(imgs[prevIndex]);
+      case 'ArrowLeft':
+        openModal(imgs[indices.prev]);
         break;
     }
   }
-}
+};
+
+
+// CLOSING MODAL
+
+// When <span> (x) is clicked, close the modal
+span.onclick = function() {
+  closeModal();
+};
 
 // Pressing escape closes modal
 document.onkeydown = event => {
@@ -105,9 +142,16 @@ document.onkeydown = event => {
   }
 };
 
+// Close modal when it is clicked
+modal.addEventListener('click', closeModal, false);
+
+
+// SWITCH IMAGE BY SWIPING OR MOUSE DRAG
+
 // Unify touch and click cases
 unify = e => { return e.changedTouches ? e.changedTouches[0] : e };
 
+// Where swipe or mousedown starts
 let x0 = null;
 
 lock = event => { x0 = unify(event).clientX };
@@ -122,12 +166,11 @@ move = event => {
       case  1: changeModalImage('ArrowLeft'); break;
     }
   }
-}
+};
 
-modal.addEventListener('click', closeModal, false);
 modal.addEventListener('mousedown', lock, false);
 modal.addEventListener('touchstart', lock, false);
 modal.addEventListener('mouseup', move, false);
 modal.addEventListener('touchend', move, false);
-modal.addEventListener('touchmove', e => {e.preventDefault()}, false)
-modal.addEventListener('mousemove', e => {e.preventDefault()}, false)
+modal.addEventListener('touchmove', e => {e.preventDefault()}, false);
+modal.addEventListener('mousemove', e => {e.preventDefault()}, false);
