@@ -32,6 +32,9 @@
                         onclick="openTab(event, 'projects')">
                     Projects</button>
                 <button class="tablinks"
+                        onclick="openTab(event, 'values')">
+                    Values</button>
+                <button class="tablinks"
                         onclick="openTab(event, 'contact')">
                     Contact</button>
             </div>
@@ -44,21 +47,23 @@
                      alt="A picture of me" 
                      id="profile-picture">
                 Hello! I'm Simon Bengtsson and this is my personal page. Here
-                you can find out a little bit about me, and have a look at my
-                resume. I have also included an album of some of my favorite
-                pictures. 
+                you can find out a little bit about me, and have a look at a
+                shortened version of my
+                resume. If you want to see the whole resume, send me a
+                request. My Contact information can be found under the <em>Contact</em> tab.
                 </p>
 
                 <p>
+                Other content includes an album of some of my favorite
+                pictures and some of my coding projects.
                 If you are interested in learning more about my coding
-                experience, you can have a look at the Projects tab or my <a
+                experience, you can have a look at the <em>Projects</em> tab or my <a
                     href="https://github.com/gevhaz">GitHub profile</a>. 
                 </p>
 
                 <p>
-                If you
-                want to get in touch and haven't received my email address, I
-                provide alternative ways to contact me in the Contacts tab.
+                In the <em>Goals</em> tab, I write about my values and what I
+                want to accomplish in life.
                 </p>
             </div>
         </div>
@@ -100,7 +105,7 @@
                     <div class="resume-entry">
                         <p class="resume-object">Master's Program of Law </p>
                         <p class="study-location">Lund University</p>
-                        <p class="study-year">2014</p>
+                        <p class="study-year">2016–2020</p>
                         <ul class="resume-list">
                             <li> Master's thesis: 
                                 <span>
@@ -123,7 +128,7 @@
                         <p class="resume-object">Bachelor's Program of Natural Science,
                         Theoretical Physics</p>
                         <p class="study-location">Lund University</p>
-                        <p class="study-year">2014</p>
+                        <p class="study-year">2013–2015</p>
                     </div>
                 </div>
 
@@ -311,7 +316,15 @@
                 <li class="gallery-photo">
                     <img src="/images/thumbnails/flower02.jpg"
                          alt="Cherry blossoms">
-                <li class="gallery-photo"></li>
+                    <li class="gallery-photo"></li>
+                    <li class="gallery-photo">
+                        <img src="/images/thumbnails/flower03.jpg"
+                             alt="Cherry blossom">
+                        <li class="gallery-photo"></li>
+                        <li class="gallery-photo">
+                            <img src="/images/thumbnails/flower04.jpg"
+                                 alt="Daffodil">
+                            <li class="gallery-photo"></li>
             </ul>
 
             <!-- Modal for gallery images -->
@@ -338,7 +351,7 @@
                 </div>
                 <div id="contactlinks" class="contactbox">
                     <ul>
-                        <li> <img src="/images/linkedin.svg"><a href="https://www.linkedin.com/in/simon-bengtsson-864a8b186/">LinkedIn</a>
+                        <li> <img src="/images/linkedin.svg"><a href="linkedin.com/in/gevhaz">LinkedIn</a>
                         </li>
                         <li> <img src="/images/github.svg"><a href="https://github.com/gevhaz">GitHub</a>
                         </li>
@@ -352,33 +365,191 @@
             </div>
         </div>
         <div id="projects" class="tabcontent">
-          <div id=p5js-section>
-            <h2>p5.js</h2>
-            <p>One of my hobbies is to make visualizations for music. I mainly
-            use openFrameworks but I started out in Processing and p5.js, and
-            the latter is easy to host on a webpage so I include some of these
-            projects here as well.</p>
+            <div id=p5js-section>
+                <h2>p5.js</h2>
+                <p>One of my hobbies is to make visualizations for music. I mainly
+                use openFrameworks but I started out in Processing and p5.js, and
+                the latter is easy to host on a webpage so I include some of these
+                projects here as well. Click them to start playback.
+                </p>
 
-            <iframe src="" data-src="p5/springs/springs.html"
-                           class="p5js"></iframe>
-            <iframe src="" data-src="p5/dancing-spheres/dancing-spheres.html"
-                           class="p5js"></iframe>
+                <p>
+                Keep in mind that the projects load when you
+                open this tab, which might be heavy on your CPU. If it seems like a
+                problem you can switch to another tab and they will be closed.</p>
 
-          </div>
-          <div id=of-section>
-            <h2>openFrameworks</h2>
-            <p>Here is a video of one of my openFrameworks projects. The code
-            can be found <a
-                           href=https://github.com/gevhaz/18.1_shader_u12>on
-                           Github</a>.
-            </p>
+                <iframe src="" data-src="p5/springs/springs.html"
+                               class="p5js"></iframe>
+                <iframe src="" data-src="p5/dancing-spheres/dancing-spheres.html"
+                               class="p5js"></iframe>
 
-            <video id=ofvideo preload="none" controls>
-              <source src="/video/u12_final.mp4" type="video/mp4">
-              There should have been a video here but your browser does not seem
-              to support it.
-            </video>
-          </div>
+            </div>
+            <div id=of-section>
+                <h2>openFrameworks</h2>
+                <p>Here is a video of one of my openFrameworks projects. The code
+                can be found <a
+                                 href=https://github.com/gevhaz/18.1_shader_u12>on
+                                 Github</a>.
+                </p>
+
+                <video id=ofvideo preload="none" controls>
+                    <source src="/video/u12_final.mp4" type="video/mp4">
+                    There should have been a video here but your browser does not seem
+                    to support it.
+                </video>
+
+                <p>
+                I have also uploaded one of my more recent project (my 28th, to be
+                specific), which you can <a
+                                             href="https://github.com/gevhaz/28_have_a_dream-fbm_cloud">here</a>.
+                                         Since it is not finished, there is no video as of yet but there is a
+                                         screenshot on the project page which shows the current state.
+                </p>
+            </div>
+        </div>
+        <div class="tabcontent" id="values">
+
+            <h2>My values</h2>
+
+            <p> If I have been successful, you will not find any information
+            about me online apart from what I link to on my webpage. To make up
+            for that, for those who want to get to know more about me, I will
+            outline some of my values. If I had to choose three values that
+            define me, it would be positive attitude towards effective altruism,
+            digital rights, and free software. </p>
+
+            <p> <strong>Effective altruism</strong> is a movement that thinks
+            critically about how to do the most good, as in how to maximize your
+            positive impact on the world. Two key organizations are 
+            <a href="https://80000hours.org/">80 000 hours</a> and 
+            <a href="https://www.givingwhatwecan.org/">Giving What We Can</a>. 
+            The latter organization, of which I am a member, aims to create a
+            community of people pledging to give 10% of their income to the most
+            effective organizations in the world. Perhaps their style of
+            thinking, and that of the Effective Altruism community in general,
+            is most clearly explained with a quote from their webpage: </p>
+
+            <blockquote
+            cite="https://www.givingwhatwecan.org/get-involved/what-we-can-achieve/">
+
+                <p> For an example of the difference that effectiveness can
+                make, suppose we want to help people suffering from blindness:
+                </p>
+
+                <ul>
+                    <li>In a developed country this would usually involve paying
+                        to train a guide dog and its new owner, which costs
+                        around $50,000. </li>
+
+                    <li>In 2010, there were about 20 million people, mostly in
+                        developing countries, suffering from severe vision
+                        impairments caused by cataracts. Many of these people
+                        could have their vision restored by a safe eye
+                        operation, costing only about $1000, according to
+                        GiveWell.org </li>
+
+                    <li>For the same amount of money as training one guide dog
+                        to help one person, we could instead cure about 50 cases
+                        of severe vision impairment. </li>
+                </ul>
+            </blockquote>
+
+            <p> This concern for putting the effort of improving the world on
+            the things that matter is one inspiration for my <a
+            href="https://lup.lub.lu.se/student-papers/record/9006623">Master's
+            thesis</a>. In it, I use statistical methods to evaluate whether
+            ratifiers of the International Covenant on Civil and Political
+            Rights behave differently from nonratifiers in times of regime
+            change. I find no support for there being a difference in the human
+            rights trend between them, which may seem pessimistic but if it is
+            really the case, it is better to acknowledge it and find more
+            effective ways to improve the respect for human rights around the
+            world. At the same time, I don't want to exaggerate the scope of my
+            study – it looked at behavior during short periods of time and the
+            results do not rule out an effect of ratification in other
+            circumstances. </p>
+
+            <p> Effective Altruism also has one branch that is concerned with
+            existential risk – dangers to humanity as a species, for example
+            extinction by asteroid strikes, extreme forms of global warming and
+            malicious Artificial Intelligence. These risks are of course fatal
+            if they occur but the likelihood that they actually will is often
+            uncertain. Therefore, many Effective Altruists are doing the ground
+            work of just figuring out what the community should focus on. For
+            example, Toby Ord, cofounder of <em>Giving What We Can</em>,
+            recently released a book on the subject, called <em>The Precipice:
+                Existential Risk and the Future of Humanity</em>
+            <sup><a href="https://theprecipice.com/" 
+                title="Link to the book's webpage: https://theprecipice.com/">[*]</a></sup>.
+            It's on my reading list. </p>
+
+            <p> <strong>Digital rights</strong> are those human rights that are
+            relevant for all forms of computer use. These include the right to
+            privacy and freedom of expression as applied in the context of the
+            internet. Digital rights are important because they allows people to
+            realize themselves online in a way that is perhaps not possible
+            otherwise. What I mean by this is perhaps best put by Tijmen Schep,
+            author of <a
+            href="https://www.socialcooling.com/">socialcooling.com</a>: </p>
+
+            <blockquote cite="https://www.socialcooling.com/">
+                <p> If you feel you are being watched, you change your behavior.
+                </p>
+                <p> Big Data is supercharging this effect. </p>
+                <p> This could limit your desire to take risks or exercise free
+                speech. </p>
+                <p> Over the long term these 'chilling effects' could 'cool
+                down' society. </p>
+            </blockquote>
+
+            <p> If behaving irregularly has negative consequences for us, we
+            will tend to conform to behavior that is considered normal and
+            become risk-averse. This is sure to stifle innovation. Perhaps your
+            wacky idea may greatly benefit others but you can't know until you
+            have tried. If you are weighing the pros and cons of starting your
+            dream project, the prospect of a potential failure following you for
+            the rest of certainly puts a lot of weight on the con side. </p>
+            
+            <p> Here, a judgment from the European Court of Justice is relevant.
+            In the "right to be forgotten" case (C-131/12) a man complained that
+            whenever someone Googled his name, an article, with his name in it,
+            about the forced sale of property as a consequence of debt came up.
+            He argued that he should have the right to have the search results
+            limited. The judgment came out mostly in favor of the man. What is
+            interesting here is the background. Regardless of whether the sale
+            of his property was a consequence of his immoral actions, he should
+            have a chance to start over and not have the mistake follow him for
+            the rest of his life. </p>
+
+            <p> I wrote my 
+            <a href="https://lup.lub.lu.se/student-papers/record/8965816">
+                Bachelor's thesis</a> on a related theme, which also, like my
+            Master's thesis, connects to the effectiveness of international
+            treaties. I looked at the Privacy Shield agreement between the EU
+            and the United States which allows American organizations to enter
+            into a program where they promise to respect the digital rights of
+            Europeans as set out in the General Data Protection Regulation and
+            thereby simplifying the transfer of personal data to servers outside
+            the EU. My purpose was mainly to construct a game theoretic model of
+            the situation for my own learning but I found that given some
+            conditions, the agreement should be expected to be respected. </p>
+
+            <p> <strong>Free software</strong> is "free as in freedom, not
+            beer". It is open-source software, but with a philosophy around it
+            of promoting sharing and modification.<sup><a
+            href="https://www.gnu.org/philosophy/free-sw.html"
+            title=
+            "For a more detailed definition, see gnu.org/philosophy/free-sw.html">[*]</a></sup> 
+            As such, the development is generally done
+            publicly with the source code continuously available, rather than
+            just published once completed. It is in my mind also closely tied to
+            digital rights because when you can see what a program does before
+            you run it on your computer you can make sure that you are the one
+            in control. Of course, nobody has the time to read the code of all
+            the software they are using but when the code is public, it is
+            enough for one whistle-blower to report malicious code for everyone
+            to be warned. </p>
+
         </div>
 
     </body>

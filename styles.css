@@ -20,6 +20,10 @@
   src: url(fonts/FreeSansBold-small.woff); }
 
 @font-face {
+  font-family: FreeSerifBold;
+  src: url(fonts/FreeSerifBold-small.woff); }
+
+@font-face {
   font-family: FreeSerif;
   src: url(fonts/FreeSerif-small.woff); }
 
@@ -69,14 +73,21 @@ a {
 h1, h2, h3, h4 {
   font-family: FreeSans, sans-serif; }
 
-p {
+p, li {
   color: #444;
   font-family: FreeSerif, serif; }
+
+strong {
+  font-style: normal;
+  font-family: FreeSerifBold; }
+
+em {
+  font-style: normal;
+  font-family: FreeSerifItalic; }
 
 .header {
   border-bottom: 1px solid black;
   text-align: center;
-  color: #222;
   display: flex;
   flex-flow: row wrap;
   margin: 1em; }
@@ -99,7 +110,6 @@ p {
   justify-content: flex-end;
   flex-flow: row wrap;
   overflow: hidden;
-  background-color: #fff;
   margin: auto 2% .6em auto; }
 
 .tab button {
@@ -382,6 +392,9 @@ p {
 #contactlinks ul {
   list-style-type: none;
   background-color: #eee;
+  border-radius: 0.5em;
+  box-shadow: 0.025em 0.1em 0.2em 0.1em #333;
+  box-shadow: 0.025em 0.1em 0.2em 0.1em rgba(0, 0, 0, 0.3);
   padding: 10%;
   margin: auto;
   height: 80%; }
@@ -389,7 +402,7 @@ p {
 #contactlinks a {
   font-family: FreeSansBold, sans-serif;
   font-size: 1em;
-  color: #666; }
+  color: #524e59; }
 
 #contactlinks img {
   height: .7em;
@@ -408,3 +421,15 @@ p {
   width: 100%;
   height: auto;
   padding: 1em 0; }
+
+#values {
+  text-align: justify; }
+
+blockquote {
+  font-family: FreeSerif serif;
+  font-size: .9em;
+  /*
+    border-left: 0.2em solid $cv-red;
+    padding-left: 0.8em;
+    margin: 1em;
+    */ }
