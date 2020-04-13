@@ -110,7 +110,8 @@ em {
   justify-content: flex-end;
   flex-flow: row wrap;
   overflow: hidden;
-  margin: auto 2% .6em auto; }
+  margin: auto 2% .6em auto;
+  padding-left: 2em; }
 
 .tab button {
   background-color: inherit;
@@ -142,7 +143,15 @@ em {
   font-family: FreeSerif, serif; }
 
 #home p {
-  padding: 0 .25em; }
+  padding: 0 .25em;
+  text-align: justify; }
+
+#profile-picture {
+  float: right;
+  width: 10em;
+  height: auto;
+  border: 2px solid #474a4f;
+  margin-left: 1em; }
 
 #resume-title {
   text-align: left; }
@@ -172,13 +181,6 @@ em {
   list-style-type: "– ";
   font-family: FreeSerif, serif;
   margin-top: 0; }
-
-#profile-picture {
-  float: right;
-  width: 10em;
-  height: 10em;
-  border: 3px solid #474a4f;
-  margin-left: .5em; }
 
 .resume-object {
   font-family: FreeSerifItalic, serif;
